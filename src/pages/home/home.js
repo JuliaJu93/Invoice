@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 
-function Terminals() {
+function Home() {
 	const [user, setUser] = useState(null);
 	const [friends, setFriends] = useState([]);
 
@@ -30,4 +30,4 @@ function Terminals() {
 	);
 }
 
-export default Terminals;
+export default Home;
