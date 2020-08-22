@@ -1,20 +1,8 @@
-import React, {useEffect} from "react";
+import React from "react";
 
-function RegisterButton() {
-	useEffect(() => {
-		fetch('https://api.github.com/users/JuliaJu93')
-  			.then((response) => {
-    			return response.json();
-  			})
-  			.then((data) => {
-    			console.log(data);
-  			});
-	}, []);
-
+function RegisterButton () {
 	return (
-		<div>
-			<button > Авторизоваться </button>
-		</div>
+		<input type = "submit" value = "Авторизоваться" />
 	);
 }
 
