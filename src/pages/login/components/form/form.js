@@ -28,6 +28,7 @@ function Form (props) {
 		requestForAvatar (login).then((data) => {
 			if (data.avatar_url){
 				setIsLoginCorrect(true);
+				localStorage.setItem('avatarUrl', data.avatar_url);
 			}
 			else {setIsLoginCorrect(false)}
 		  })

@@ -7,21 +7,25 @@ import './index.css';
 import Login from './pages/login';
 import PrivateRoute from './pages/home/components/private_route';
 import Home from './pages/home';
+import Sidebar from './common_components/sidebar';
 
 function Main () {
 	return (
-		<Router>
-			<main>
-				<Switch>
-					<PrivateRoute exact path = '/' component={Home} />
-				</Switch>
-				<Switch>
-					<Route exact path = '/login'>
-						<Login />
-					</Route>
-				</Switch>
-			</main>
-		</Router>
+		<div>
+			<Router>
+				<main>
+					<Switch>
+						<PrivateRoute exact path = '/' component={Home} />
+					</Switch>
+					<Switch>
+						<Route exact path = '/login'>
+							<Login />
+						</Route>
+					</Switch>
+				</main>
+			</Router>
+			{localStorage.getItem('registration') && <Sidebar /> }
+		</div>
 	);
 }
 
