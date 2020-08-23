@@ -8,6 +8,8 @@ import Login from './pages/login';
 import PrivateRoute from './pages/home/components/private_route';
 import Home from './pages/home';
 import Sidebar from './common_components/sidebar';
+import Terminals from './pages/terminals';
+import Buyers from './pages/buyers';
 
 function Main () {
 	return (
@@ -33,8 +35,8 @@ function Main () {
 						</Route>
 					</Switch>
 				</main>
+				{localStorage.getItem('registration') && <Sidebar /> }
 			</Router>
-			{localStorage.getItem('registration') && <Sidebar /> }
 		</div>
 	);
 }
