@@ -4,20 +4,16 @@ import { Redirect } from 'react-router-dom';
 import Form from './components/form';
 
 function Login() {
-	const [isLogged, setIsLogged] = useState(!!localStorage.getItem('registration'));
+	const [isLogged, setIsLogged] = useState(false);
 	useEffect(() => {
-		const token = new URLSearchParams(window.location.hash).get(
-			'#access_token'
-		);
-		if (token) {
-			localStorage.setItem('registration', token);
-			setIsLogged(true);
+		if (isLogged) {
+			localStorage.setItem('registration', true);
 		}
-	}, []);
+	}, [isLogged]);
 
 	return (
 		<div>
-			<Form />
+			<Form isLogged = {setIsLogged}/>
 			{isLogged && <Redirect to = '/' />}
 		</div>
 	);

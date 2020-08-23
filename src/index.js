@@ -8,7 +8,7 @@ import Login from './pages/login';
 import PrivateRoute from './pages/home/components/private_route';
 import Home from './pages/home';
 
-function Main() {
+function Main () {
 	return (
 		<Router>
 			<main>
