@@ -1,9 +1,11 @@
 import React from 'react';
 
+import TerminalForm from "./components/terminals_form"
+
 function Terminals() {
 	return (
 		<div>
-			<h2> ff</h2>
+			<TerminalForm />
 		</div>
 	);
 }
