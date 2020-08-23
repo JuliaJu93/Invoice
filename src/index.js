@@ -22,6 +22,16 @@ function Main () {
 							<Login />
 						</Route>
 					</Switch>
+					<Switch>
+						<Route exact path = '/terminals'>
+							<Terminals />
+						</Route>
+					</Switch>
+					<Switch>
+						<Route exact path = '/buyers'>
+							<Buyers />
+						</Route>
+					</Switch>
 				</main>
 			</Router>
 			{localStorage.getItem('registration') && <Sidebar /> }
