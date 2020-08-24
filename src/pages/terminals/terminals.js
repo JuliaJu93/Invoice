@@ -1,11 +1,13 @@
 import React from 'react';
 
-import TerminalForm from "./components/terminals_form"
+import TerminalsForm from "./components/terminals_form/";
+import TerminalsTable from "./components/terminals_table/";
 
 function Terminals() {
 	return (
 		<div>
-			<TerminalForm />
+			<TerminalsForm />
+			<TerminalsTable />
 		</div>
 	);
 }
