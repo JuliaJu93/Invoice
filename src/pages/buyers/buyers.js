@@ -1,9 +1,11 @@
 import React from 'react';
 
+import BuyersTable from './buyers_table';
+
 function Buyers() {
 	return (
 		<div>
-			<h2> ddd</h2>
+			<BuyersTable />
 		</div>
 	);
 }

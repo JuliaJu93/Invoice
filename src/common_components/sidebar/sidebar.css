@@ -1,0 +1,10 @@
+.sidebar {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 30%;
+}
+.slidebar_avatar {
+    width: 90%;
+    margin: 1rem 0;
+}

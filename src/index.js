@@ -21,7 +21,7 @@ function Main () {
 	}, [isLogged]);
 
 	return (
-		<div>
+		<div className = "container">
 			<Router>
 				<main>
 					<Switch>
