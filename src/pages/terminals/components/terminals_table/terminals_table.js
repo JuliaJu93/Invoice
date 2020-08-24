@@ -2,7 +2,7 @@ import React from 'react';
 
 import NewTerminal from "../new_terminal";
 
-function TerminalsTable({terminal}) {
+function TerminalsTable({terminal, setTerminal}) {
 	
 	return (
 		<div>
@@ -13,7 +13,7 @@ function TerminalsTable({terminal}) {
 						<th> Описание </th>
   					</tr>
 				</thead>
-				<NewTerminal terminal= {terminal}/>
+				<NewTerminal terminal= {terminal} setTerminal={setTerminal}/>
 			</table>
 		</div>
 	);

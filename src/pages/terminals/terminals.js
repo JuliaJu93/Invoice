@@ -8,7 +8,7 @@ function Terminals() {
 	return (
 		<div>
 			<TerminalsForm terminal={terminal} setTerminal={setTerminal}/>
-			{terminal.length > 0 && <TerminalsTable terminal={terminal}/>}
+			{terminal.length > 0 && <TerminalsTable terminal={terminal} setTerminal={setTerminal}/>}
 		</div>
 	);
 }
