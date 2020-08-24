@@ -3,8 +3,9 @@ import React, {useState, useEffect} from 'react';
 import RegisterButton from '../register_button';
 import {requestForAvatar} from "./request_for_avatar";
 import {passwordVerification} from "./password_verification";
+import {errorOutput} from "./error_output";
 
-function Form (props) {
+function Form ({setIsLogged}) {
 	const [login, setLogin] = useState('');
 	const [password, setPassword] = useState('');
 	const [isLoginCorrect, setIsLoginCorrect] = useState(false);
@@ -32,14 +33,14 @@ function Form (props) {
 			}
 			else {setIsLoginCorrect(false)}
 		  })
-		passwordVerification(password, setIsPasswordCorrect, setMistakes);
+		  setMistakes(passwordVerification(password, setIsPasswordCorrect));
 	}
 
 	useEffect(() => {
 		if (isLoginCorrect && isPasswordCorrect) {
-			props.isLogged(true);
+			setIsLogged(true);
 		}
-	}, [isLoginCorrect, isPasswordCorrect, props]);
+	}, [isLoginCorrect, isPasswordCorrect, setIsLogged]);
 
 	return (
 		<div>
@@ -50,11 +51,9 @@ function Form (props) {
 			<input type = "password" name = "password" id = "password" value={password} onChange={handleChange}></input>
 			<RegisterButton />
 		</form>
-		{mistakes.length === true &&
-			<div>
-				{mistakes}
-			</div>
-		}
+		<ul>
+			{errorOutput(mistakes)}
+		</ul>
 		</div>
 	);
 }

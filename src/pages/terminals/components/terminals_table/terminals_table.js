@@ -1,13 +1,19 @@
 import React from 'react';
 
-function TerminalsTable() {
+import NewTerminal from "../new_terminal";
+
+function TerminalsTable({terminal}) {
+	
 	return (
 		<div>
 			<table>
-				<tr>
-    				<th> Название терминала </th>
-					<th> Описание </th>
-  				</tr>
+				<thead>
+			 		<tr>
+    					<th> Название терминала </th>
+						<th> Описание </th>
+  					</tr>
+				</thead>
+				<NewTerminal terminal= {terminal}/>
 			</table>
 		</div>
 	);
