@@ -1,64 +1,64 @@
 .terminals {
-    margin: 3rem;
-    width: 100%;
+  margin: 3rem;
+  width: 100%;
 }
 
-.terminal_form form{
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
+.terminal_form form {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
 }
 
 .terminal_form div {
-    display: flex;
-    flex-direction: column;
-    margin: 0.5rem;
-    width: 30%;
-    justify-content: start;
+  display: flex;
+  flex-direction: column;
+  margin: 0.5rem;
+  width: 30%;
+  justify-content: start;
 }
 
 .terminal_form textarea {
-    max-width: 300px;
-    max-height: 200px;
+  max-width: 300px;
+  max-height: 200px;
 }
 
-.terminal_form input[type=text] {
-    height: 1.8rem;
+.terminal_form input[type='text'] {
+  height: 1.8rem;
 }
 
-.terminal_form input[type=submit] {
-    margin: 1rem 0;
-    width: 60%;
-    background-color: #4c9ab9;
-    border-radius: 1rem;
-    height: 1.8rem;
-    color: white;
-    border: none;
-    cursor: pointer;
+.terminal_form input[type='submit'] {
+  margin: 1rem 0;
+  width: 60%;
+  background-color: #4c9ab9;
+  border-radius: 1rem;
+  height: 1.8rem;
+  color: white;
+  border: none;
+  cursor: pointer;
 }
 
 .terminal_table {
-    display: flex;
-    justify-content: center;
-    margin: 4rem 2rem 2rem;
+  display: flex;
+  justify-content: center;
+  margin: 4rem 2rem 2rem;
 }
 
 .terminal_table table {
-    width: 100%;
+  width: 100%;
 }
 
 .terminal_table td {
-    width: 30%;
-    border: 1px solid #c2c3c5; 
+  width: 30%;
+  border: 1px solid #c2c3c5;
 }
 
 .terminal_table td:last-child {
-    border: none; 
+  border: none;
 }
 
-.terminal_table button{
-    background: #c2c3c5; 
-    border: none;
-    border-radius: 2px;
-    height: 2rem;
+.terminal_table button {
+  background: #c2c3c5;
+  border: none;
+  border-radius: 2px;
+  height: 2rem;
 }

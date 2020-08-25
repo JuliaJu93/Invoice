@@ -1,3 +1,3 @@
-export function addTerminal () {
-    console.log ('fff')
-};
+export function addTerminal() {
+  console.log('fff');
+}

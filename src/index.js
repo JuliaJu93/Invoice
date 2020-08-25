@@ -12,41 +12,58 @@ import Terminals from './pages/terminals';
 import Buyers from './pages/buyers';
 import BuyersID from './pages/buyer_id';
 
-function Main () {
-	const [isLogged, setIsLogged] = useState(!!localStorage.getItem('registration'));
-	
-	useEffect(() => {
-		if (isLogged) {
-			localStorage.setItem('registration', true);
-		}
-	}, [isLogged]);
+function Main() {
+  const [isLogged, setIsLogged] = useState(
+    !!localStorage.getItem('registration')
+  );
 
-	return (
-		<div className = "container">
-			<Router>
-				<main>
-					<Switch>
-						<PrivateRoute isLogged={isLogged} exact path = '/' component={Home} />
-					</Switch>
-					<Switch>
-						<Route exact path = '/login'>
-							<Login isLogged={isLogged} setIsLogged={setIsLogged} />
-						</Route>
-					</Switch>
-					<Switch>
-						<PrivateRoute isLogged={isLogged} exact path = '/terminals' component ={Terminals} />
-					</Switch>
-					<Switch>
-						<PrivateRoute isLogged={isLogged} exact path = '/buyers' component ={Buyers} />
-					</Switch>
-					<Switch>
-						<PrivateRoute isLogged={isLogged} exact path = '/buyers/:id' component ={BuyersID} />
-					</Switch>
-				</main>
-				{isLogged && <Sidebar /> }
-			</Router>
-		</div>
-	);
+  useEffect(() => {
+    if (isLogged) {
+      localStorage.setItem('registration', true);
+    }
+  }, [isLogged]);
+
+  return (
+    <div className="container">
+      <Router>
+        <main>
+          <Switch>
+            <PrivateRoute isLogged={isLogged} exact path="/" component={Home} />
+          </Switch>
+          <Switch>
+            <Route exact path="/login">
+              <Login isLogged={isLogged} setIsLogged={setIsLogged} />
+            </Route>
+          </Switch>
+          <Switch>
+            <PrivateRoute
+              isLogged={isLogged}
+              exact
+              path="/terminals"
+              component={Terminals}
+            />
+          </Switch>
+          <Switch>
+            <PrivateRoute
+              isLogged={isLogged}
+              exact
+              path="/buyers"
+              component={Buyers}
+            />
+          </Switch>
+          <Switch>
+            <PrivateRoute
+              isLogged={isLogged}
+              exact
+              path="/buyers/:id"
+              component={BuyersID}
+            />
+          </Switch>
+        </main>
+        {isLogged && <Sidebar />}
+      </Router>
+    </div>
+  );
 }
 
 ReactDOM.render(<Main />, document.getElementById('root'));

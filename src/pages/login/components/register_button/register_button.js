@@ -1,9 +1,7 @@
-import React from "react";
+import React from 'react';
 
-function RegisterButton () {
-	return (
-		<input type = "submit" value = "Авторизоваться" />
-	);
+function RegisterButton() {
+  return <input type="submit" value="Авторизоваться" />;
 }
 
 export default RegisterButton;

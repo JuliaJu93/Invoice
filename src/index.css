@@ -1,33 +1,36 @@
-html, body, #root {
-height: 100%;
-margin: 0;
+html,
+body,
+#root {
+  height: 100%;
+  margin: 0;
 }
 
 .container {
-    display: flex;
-    flex-direction: row-reverse;
-    justify-content: flex-end;
-    height: 100%;
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: flex-end;
+  height: 100%;
 }
 
 main {
-    display: flex;
-    justify-content: center; 
-    width: 100%;
+  display: flex;
+  justify-content: center;
+  width: 100%;
 }
 
 a {
-    text-decoration: none;
+  text-decoration: none;
 }
 
 button {
-    cursor: pointer;
+  cursor: pointer;
 }
 
-a:visited, a:link {
-    color: #306479;
+a:visited,
+a:link {
+  color: #306479;
 }
 
 a:hover {
-    color: #1a343f;
+  color: #1a343f;
 }

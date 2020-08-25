@@ -1,35 +1,35 @@
 .sidebar {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 30%;
-    height: 100%;
-    background: #f5f6f7;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 30%;
+  height: 100%;
+  background: #f5f6f7;
 }
 
 .slidebar_avatar {
-    width: 90%;
-    margin: 1rem 0;
+  width: 90%;
+  margin: 1rem 0;
 }
 
 .sidebar_navigation {
-    margin: auto 0;
+  margin: auto 0;
 }
 
-.sidebar_navigation ul{
-    padding: 0;
+.sidebar_navigation ul {
+  padding: 0;
 }
 
-.sidebar_navigation li{
-    list-style-type: none;
-    margin: 1rem;
-    font-size: 1.2rem;
+.sidebar_navigation li {
+  list-style-type: none;
+  margin: 1rem;
+  font-size: 1.2rem;
 }
 
 .sidebar_footer {
-    margin-top: auto;
+  margin-top: auto;
 }
 
-.sidebar_footer p{
-    text-align: center;
+.sidebar_footer p {
+  text-align: center;
 }
