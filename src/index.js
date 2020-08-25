@@ -10,6 +10,7 @@ import Home from './pages/home';
 import Sidebar from './common_components/sidebar';
 import Terminals from './pages/terminals';
 import Buyers from './pages/buyers';
+import BuyersID from './pages/buyers/ID';
 
 function Main () {
 	const [isLogged, setIsLogged] = useState(!!localStorage.getItem('registration'));
@@ -37,6 +38,9 @@ function Main () {
 					</Switch>
 					<Switch>
 						<PrivateRoute isLogged={isLogged} exact path = '/buyers' component ={Buyers} />
+					</Switch>
+					<Switch>
+						<PrivateRoute isLogged={isLogged} exact path = '/buyers/ID' component ={BuyersID} />
 					</Switch>
 				</main>
 				{isLogged && <Sidebar /> }
