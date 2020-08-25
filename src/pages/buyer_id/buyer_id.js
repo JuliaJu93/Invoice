@@ -1,6 +1,8 @@
 import React from 'react';
 import {useParams} from "react-router-dom";
 
+import "./buyer_id.css";
+
 import {buyersArray} from "../buyers/buyersArrow"
 
 function BuyersID() {
@@ -10,7 +12,7 @@ function BuyersID() {
 	}
 	let buyer = searchBuyer();
 	return (
-		<div>
+		<div className = "buyerId">
 			<table>
 				<thead>
 			 		<tr>
