@@ -1,3 +1,3 @@
-import Buyers from './buyers';
+import BuyersID from './buyers_id';
 
-export default Buyers;
+export default BuyersID;

@@ -10,7 +10,7 @@ import Home from './pages/home';
 import Sidebar from './common_components/sidebar';
 import Terminals from './pages/terminals';
 import Buyers from './pages/buyers';
-import BuyersID from './pages/buyers/ID';
+import BuyersID from './pages/buyers_id';
 
 function Main () {
 	const [isLogged, setIsLogged] = useState(!!localStorage.getItem('registration'));
