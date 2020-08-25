@@ -54,7 +54,9 @@ function BuyersTable() {
 						<th> Общая выручка <button  onClick = {sorting} name = 'totalRevenues'> <img src={sortingImg} alt ="sorting" name = 'totalRevenues'/> </button></th>
   					</tr>
 				</thead>
-				<NewBuyers buyers = {buyers}/>	
+				<tbody>
+					<NewBuyers buyers = {buyers}/>
+				</tbody>
 			</table>
 		</div>
 	);

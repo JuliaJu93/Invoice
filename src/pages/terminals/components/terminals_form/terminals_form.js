@@ -40,13 +40,19 @@ function TerminalsForm ({terminal, setTerminal}) {
 	}, [terminal]);
 	
 	return (
-		<div>
+		<div className = "terminal_form">
 			<form onSubmit={handleSubmit}>
-				<label htmlFor = "terminalName"> Название терминала: </label>
-				<input type = "text" id = "terminalName" name = "terminalName" value ={terminalName} onChange={handleChange} />
-				<label htmlFor = "description"> Описание: </label>
-				<textarea id = "description" name = "descriptionTerminal" value ={descriptionTerminal} onChange={handleChange} />
-				<input type = "submit" value = "Добавить" />
+				<div>
+					<label htmlFor = "terminalName"> Название терминала: </label>
+					<input type = "text" id = "terminalName" name = "terminalName" value ={terminalName} onChange={handleChange} />
+				</div>
+				<div>
+					<label htmlFor = "description"> Описание: </label>
+					<textarea id = "description" name = "descriptionTerminal" value ={descriptionTerminal} onChange={handleChange} />
+				</div>
+				<div>
+					<input type = "submit" value = "Добавить" />
+				</div>
 			</form>
 		</div>
 	);

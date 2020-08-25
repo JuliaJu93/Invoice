@@ -12,6 +12,10 @@
     margin: 1rem 0;
 }
 
+.sidebar_navigation {
+    margin: auto 0;
+}
+
 .sidebar_navigation ul{
     padding: 0;
 }

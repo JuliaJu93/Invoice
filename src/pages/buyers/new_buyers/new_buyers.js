@@ -3,20 +3,15 @@ import { Link } from 'react-router-dom';
 
 function NewBuyers({buyers}) {
 	
-	let buyer = buyers.map((items) => 
-		<tr key = {items.id}>
-			<td> <Link to="/buers/ID"> {items.id} </Link> </td>
-			<td> {items.name} </td>
-			<td> {items.averageСheck} </td>
-			<td> {items.numberOfPurchases} </td>
-			<td> {items.totalRevenues} </td>
+	return buyers.map((buyer) => 
+		<tr key = {buyer.id}>
+			<td> <Link to={`/buyers/${buyer.id}`}> {buyer.id} </Link> </td>
+			<td> {buyer.name} </td>
+			<td> {buyer.averageСheck} </td>
+			<td> {buyer.numberOfPurchases} </td>
+			<td> {buyer.totalRevenues} </td>
 		</tr>
 	)
-	return (
-		<tbody>
-			{buyer}
-		</tbody>	
-	);
 }
 
 export default NewBuyers;

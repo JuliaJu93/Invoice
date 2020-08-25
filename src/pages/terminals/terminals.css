@@ -1,0 +1,44 @@
+.terminals {
+    margin: 3rem;
+    width: 100%;
+}
+
+.terminal_form form{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.terminal_form div {
+    display: flex;
+    flex-direction: column;
+    margin: 0.5rem;
+    width: 30%;
+    justify-content: start;
+}
+
+.terminal_form textarea {
+    max-width: 300px;
+    max-height: 200px;
+}
+
+.terminal_form input[type=submit] {
+    margin: 1rem 0;
+    width: 60%;
+    background-color: #4c9ab9;
+    border-radius: 1rem;
+    height: 1.8rem;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+.terminal_table {
+    display: flex;
+    justify-content: center;
+    margin: 2rem;
+}
+
+.terminal_table table {
+   width: 80%;
+}

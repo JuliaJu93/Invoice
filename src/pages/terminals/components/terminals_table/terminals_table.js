@@ -5,7 +5,7 @@ import NewTerminal from "../new_terminal";
 function TerminalsTable({terminal, setTerminal}) {
 	
 	return (
-		<div>
+		<div className = "terminal_table">
 			<table>
 				<thead>
 			 		<tr>
