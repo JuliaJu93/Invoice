@@ -1,5 +1,7 @@
 import React, {useState, useEffect} from 'react';
 
+import '../buyers.css'
+
 import sortingImg from '../../../img/sortingImg.png';
 import NewBuyers from '../new_buyers';
 import {buyersArray} from '../buyersArrow';
@@ -43,7 +45,7 @@ function BuyersTable() {
 	}, [parameterForFilter]);
 	
 	return (
-		<div>
+		<div className = "buyers">
 			<table>
 				<thead>
 			 		<tr>

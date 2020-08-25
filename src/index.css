@@ -20,6 +20,10 @@ a {
     text-decoration: none;
 }
 
+button {
+    cursor: pointer;
+}
+
 a:visited, a:link {
     color: #306479;
 }
