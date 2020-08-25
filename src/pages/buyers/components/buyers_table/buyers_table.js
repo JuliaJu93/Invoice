@@ -12,6 +12,7 @@ function BuyersTable() {
 	let [buyers, setBuyers] = useState(buyersArray.slice());
 	let [parameterForFilter, setParameterForFilter] = useState('');
 	let [numberOfBuyers, setNumberOfBuyers] = useState(15);
+	let [page, setPage] = useState(1);
 
 	function sorting (event) {
 		const parameter = event.target.name;
@@ -59,10 +60,10 @@ function BuyersTable() {
   					</tr>
 				</thead>
 				<tbody>
-					<NewBuyers buyers = {buyers} numberOfBuyers = {numberOfBuyers} setNumberOfBuyers = {setNumberOfBuyers}/>
+					<NewBuyers buyers = {buyers} numberOfBuyers = {numberOfBuyers} page = {page}/>
 				</tbody>
 			</table>
-			{numberOfBuyers === 5 && <Pagination />}
+			{numberOfBuyers === '5' && <Pagination setPage = {setPage}/>}
 			<SelectBuyers setNumberOfBuyers = {setNumberOfBuyers}/>
 		</div>
 	);
