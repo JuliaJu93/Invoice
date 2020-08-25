@@ -22,6 +22,10 @@
     max-height: 200px;
 }
 
+.terminal_form input[type=text] {
+    height: 1.8rem;
+}
+
 .terminal_form input[type=submit] {
     margin: 1rem 0;
     width: 60%;
@@ -36,9 +40,25 @@
 .terminal_table {
     display: flex;
     justify-content: center;
-    margin: 2rem;
+    margin: 4rem 2rem 2rem;
 }
 
 .terminal_table table {
-   width: 80%;
+    width: 100%;
+}
+
+.terminal_table td {
+    width: 30%;
+    border: 1px solid #c2c3c5; 
+}
+
+.terminal_table td:last-child {
+    border: none; 
+}
+
+.terminal_table button{
+    background: #c2c3c5; 
+    border: none;
+    border-radius: 2px;
+    height: 2rem;
 }
