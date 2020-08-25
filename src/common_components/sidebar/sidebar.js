@@ -1,6 +1,6 @@
 import React from 'react';
 
-import './sidebar.css';
+import '../sidebar.css';
 
 import Avatar from '../avatar';
 import FooterSidebar from '../footer_sidebar';

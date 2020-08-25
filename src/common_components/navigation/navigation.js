@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 
 function Navigation() {
 	return (
-		<nav>
+		<nav className = "sidebar_navigation">
             <ul>
                 <li>
                     <Link to="/terminals"> Терминалы </Link>
