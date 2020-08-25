@@ -1,15 +1,17 @@
 import React, {useState, useEffect} from 'react';
 
-import '../buyers.css'
+import '../../buyers.css'
 
-import sortingImg from '../../../img/sortingImg.png';
+import sortingImg from '../../../../img/sortingImg.png';
 import NewBuyers from '../new_buyers';
 import {buyersArray} from '../buyersArrow';
+import SelectBuyers from '../select_buyers';
+import Pagination from '../pagination';
 
 function BuyersTable() {
-
 	let [buyers, setBuyers] = useState(buyersArray.slice());
 	let [parameterForFilter, setParameterForFilter] = useState('');
+	let [numberOfBuyers, setNumberOfBuyers] = useState(15);
 
 	function sorting (event) {
 		const parameter = event.target.name;
@@ -50,16 +52,18 @@ function BuyersTable() {
 				<thead>
 			 		<tr>
     					<th> ID покупателя </th>
-						<th> Имя покупателя <input type ="text" onChange = {handleChange} name = "nameBuyers"></input></th>
+						<th> Имя покупателя <input type ="text" onChange = {handleChange} name = "nameBuyers" ></input></th>
 						<th> Средний чек <button onClick = {sorting} name = 'averageСheck'> <img src={sortingImg} alt ="sorting" name = 'averageСheck'/> </button></th>
 						<th> Количество покупок <button  onClick = {sorting} name = 'numberOfPurchases'> <img src={sortingImg} alt = "sorting" name = 'numberOfPurchases'/> </button></th>
 						<th> Общая выручка <button  onClick = {sorting} name = 'totalRevenues'> <img src={sortingImg} alt ="sorting" name = 'totalRevenues'/> </button></th>
   					</tr>
 				</thead>
 				<tbody>
-					<NewBuyers buyers = {buyers}/>
+					<NewBuyers buyers = {buyers} numberOfBuyers = {numberOfBuyers} setNumberOfBuyers = {setNumberOfBuyers}/>
 				</tbody>
 			</table>
+			{numberOfBuyers === 5 && <Pagination />}
+			<SelectBuyers setNumberOfBuyers = {setNumberOfBuyers}/>
 		</div>
 	);
 }

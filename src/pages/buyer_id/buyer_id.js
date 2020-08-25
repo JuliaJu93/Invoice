@@ -3,7 +3,7 @@ import {useParams} from "react-router-dom";
 
 import "./buyer_id.css";
 
-import {buyersArray} from "../buyers/buyersArrow"
+import {buyersArray} from "../buyers/components/buyersArrow"
 
 function BuyersID() {
 	let { id } = useParams();

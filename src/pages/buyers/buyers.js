@@ -1,6 +1,6 @@
 import React from 'react';
 
-import BuyersTable from './buyers_table';
+import BuyersTable from './components/buyers_table';
 
 function Buyers() {
 	return (

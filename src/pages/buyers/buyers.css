@@ -9,3 +9,8 @@
 .buyers img {
     width: 0.6rem;
 }
+
+.buyers select {
+    margin: 2rem 0 0 1rem;
+    width: 30%;
+}
