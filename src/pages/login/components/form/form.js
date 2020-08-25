@@ -43,13 +43,19 @@ function Form ({setIsLogged}) {
 	}, [isLoginCorrect, isPasswordCorrect, setIsLogged]);
 
 	return (
-		<div>
-		<form onSubmit={handleSubmit}>
-			<label htmlFor = "login">Логин с GitHub:</label>
-			<input type = "text" name = "login" id = "login" value={login} onChange={handleChange}></input>
-			<label htmlFor = "password">Пароль:</label>
-			<input type = "password" name = "password" id = "password" value={password} onChange={handleChange}></input>
-			<RegisterButton />
+		<div className = "login">
+		<form className = "login_form" onSubmit={handleSubmit} >
+			<div>
+				<label htmlFor = "login">Логин с GitHub:</label>
+				<input type = "text" name = "login" id = "login" value={login} onChange={handleChange}></input>
+			</div>
+			<div>
+				<label htmlFor = "password">Пароль:</label>
+				<input type = "password" name = "password" id = "password" value={password} onChange={handleChange}></input>
+			</div>
+			<div>
+				<RegisterButton />
+			</div>
 		</form>
 		<ul>
 			{errorOutput(mistakes)}

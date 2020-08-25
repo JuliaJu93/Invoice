@@ -3,3 +3,9 @@
     flex-direction: row-reverse;
     justify-content: flex-end;
 }
+
+main {
+    display: flex;
+    justify-content: center; 
+    width: 100%;
+}

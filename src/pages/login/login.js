@@ -1,6 +1,8 @@
 import React from 'react';
 import { Redirect } from 'react-router-dom';
 
+import './login.css';
+
 import Form from './components/form';
 
 function Login({isLogged, setIsLogged}) {
